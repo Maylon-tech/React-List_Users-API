@@ -5,7 +5,7 @@ const Default = ({ children }) => {
     return (
         <>
             <Header />
-            <Container maxWidth="sm" sx={{ background:"green", border: "2px solid red", height:"90vh"}}>
+            <Container maxWidth="sm">
                 { children }
             </Container>
             

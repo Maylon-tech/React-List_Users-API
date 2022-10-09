@@ -5,7 +5,9 @@ import {
 } from 'react-router-dom'
 
 import TemplateDefault from './template/Default'
-import Home from './pages/Header/Home'
+import TemplatePage from './template/Page'
+import Home from './pages/Home'
+import Customers from './pages/Customers'
 
 const App = () => {
   return (
@@ -13,8 +15,12 @@ const App = () => {
       <Router>
         <Switch>
 
+          <Route path="/customers">
+            <TemplatePage title="Clientes" Component={Customers} />
+          </Route>
+
           <Route path="/">
-            <Home />
+            <TemplatePage title="Pagina Inicial" Component={Home} />
           </Route>
 
         </Switch>
